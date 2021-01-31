@@ -1,0 +1,17 @@
+{
+    "name": "neimheadh/angular-bundle",
+    "description": "Angular frontend bundle for api-platform.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mathieu Wambre",
+            "email": "mathieu.wambre@gmail.com"
+        }
+    ],
+    "require": {
+        "api-platform/core": "^2.6",
+        "symfony/orm-pack": "^2.1",
+        "symfony/maker-bundle": "^1.28"
+    }
+}
