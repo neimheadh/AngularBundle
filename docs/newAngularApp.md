@@ -3,6 +3,13 @@
 When you install `AngularBundle`, a new angular application is created in the
 `app` root directory using the Feature, Shared, Core modules architecture.
 
+A new `package.json` in your application root directory is created according
+to composer informations. It can be changed if you want, for example, use a
+different name for your Angular project.
+
+The `neimheadh/api-platform` package is set as requirement in the `package.json`
+automatically.
+
 ## Feature, Shared and Core Modules
 
 This architecture is designed to use nested modules, separating elements into 3
@@ -16,12 +23,11 @@ different module types:
   your feature and shared modules in this module.
 * The `shared` modules: Modules including elements used in several feature
   modules. At creation, a shared `ApiPlatformSharedModule` is created including
-  the `ApiPlatformService` and typescript api endpoints abstraction classes.
+  future typescript api endpoints abstraction classes.
 * The `feature` modules: Modules handling the features of your application. Your
   application should be composed by multiple feature modules, each of them
   managing a single area of your application. You can see a feature module as
-  a mini stand alone application handling one fonctionnality of your full
-  application.
+  a mini stand alone application handling one function of your full application.
 
 To help the files inclusions, `@app`, `@core`, `@shared` and `@feature` compiler
 path are configured to access to different module paths.
@@ -48,7 +54,7 @@ where you list your books on `/books` uri and edit books on `/books/{id}/edit`.
 Then in your `app/core/routing/app.routes.ts`, just only put :
 
 ```typescript
-{ path: 'books', loadChildren: () => import('@feature/book/book.module').then(m => m.BookModule)}
+{ path: 'books', loadChildren: () => import('@feature/book/book.module').then(m => m.BookModule) }
 ```
 
 The `books` `/` and `/{id}/edit` sub routes should be configured in the
@@ -70,11 +76,11 @@ The created app files are following:
             |- entities/  
                 |- .gitkeep  
             |- api_platform.module.ts  
-            |- api_platform.service.ts  
     |- features/
         |- .gitkeep  
     |- app.module.ts
     |- app.component.ts
+|- package.json  
 ```
 
 The file are created using the angular cli command `ng`, so it have to be

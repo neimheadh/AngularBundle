@@ -6,6 +6,8 @@
 
 * Allow to create, update the angular entity abstraction class.
 * Generate the angular-api service json map.
+* Change the `--regenerate` behavior to also update angular entity abstraction
+  classes.
 
 ### `server:start`
 
