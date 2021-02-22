@@ -17,5 +17,7 @@
 
 ### `angular:init`
 
+(See [command documentation](../Resources/doc/angularInitCommand.md))
+
 * Create the angular application.
 * Executed automatically by composer.
