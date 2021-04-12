@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "api-platform/core": "2.6.2",
+        "api-platform/core": "2.6.4",
         "symfony/orm-pack": "2.1.0",
         "symfony/maker-bundle": "1.29.1"
     }
